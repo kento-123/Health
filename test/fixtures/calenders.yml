@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  before_weight: 1.5
+  weight: 1.5
+  fat_percentage: 1.5
+  muscle: 1.5
+  metabolism: 1
+
+two:
+  before_weight: 1.5
+  weight: 1.5
+  fat_percentage: 1.5
+  muscle: 1.5
+  metabolism: 1

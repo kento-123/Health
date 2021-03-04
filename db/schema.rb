@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_023538) do
+ActiveRecord::Schema.define(version: 2021_02_28_044754) do
+
+  create_table "calenders", force: :cascade do |t|
+    t.float "before_weight"
+    t.float "weight"
+    t.float "fat_percentage"
+    t.float "muscle"
+    t.integer "metabolism"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "follows", force: :cascade do |t|
     t.integer "follow_id"
@@ -25,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_023538) do
     t.float "fat_percentage"
     t.float "muscle"
     t.integer "metabolism"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

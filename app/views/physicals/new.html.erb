@@ -1,10 +1,10 @@
-<div class="main">
+
 <h1>測定結果入力</h1>
 
 <%= form_with model: @physical, local: true do |f| %>
     <div class="form-group">
         <label>前回体重</label>
-        <%= f.number_field :before_weight,placeholder: "kg", class: "form-control" %>
+        <%= @physical.before_weight %>
     </div>
     <div class="form-group">
         <label>体重</label>
@@ -26,4 +26,3 @@
     <%= f.submit "登録", class: "btn btn-primary"%>
 
 <% end %>
-</div>

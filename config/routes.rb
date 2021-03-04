@@ -10,12 +10,14 @@ Rails.application.routes.draw do
   
   #post "/posts", to: "physicals#create"
   get "/physicals", to: "physicals#new"
-
   
   get "/follows", to: "follows#index"
   #post "/follows", to: "#create",as: "follow_post"
+  get "/users/:id", to: "users#show", as: "user"
   
-  #get "/graphs", to: "graphs#index"
+  get "/graphs", to: "graphs#index"
+  
+  get "/calenders", to: "calenders#index"
   
   
 end

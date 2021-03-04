@@ -10,3 +10,4 @@ Post.create(content: "アイウエオ",user_id: 1)
 Post.create(content: "か",user_id: 2)
 Post.create(content: "さ",user_id: 1)
 
+
