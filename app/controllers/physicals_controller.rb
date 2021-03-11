@@ -1,7 +1,7 @@
 class PhysicalsController < ApplicationController
 def new
     @physical = Physical.new
-    @physical.before_weight = current_user.physicals.last.weight
+    @physical.before_weight = current_user.physicals.last&.weight
 end
 
 def create

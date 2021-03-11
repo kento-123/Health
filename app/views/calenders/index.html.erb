@@ -26,35 +26,29 @@
    </tr>
    </thead>
    
-   <% require "date" %>
-   <% d1 = Date.today %>
-   <%= d1.month %>
-    <%= d1.year %>
+   <% a = Time.zone.today.beginning_of_month %>
+   <% b = Time.zone.today.end_of_month %>
 
-   
-    <% b = 2 %>
-    <% c = 2015 %>
-
-    <% if b == 2 && c % 4 != 0 %>
-       <% a = [*(1..28)] %>
-       
-     <% elsif b == 2 && c % 100 == 0 && c % 400 != 0 %>
-       <% a = [*(1..28)] %>
-     
-    <% elsif b == 4 || b == 6 || b == 9 || b == 11 %>
-       <% a = [*(1..30)] %>
-   
-    <% elsif b == 1 || b == 3 || b == 5 || b == 7 || b == 8 || b == 10 || b == 12 %>
-       <% a = [*(1..31)] %>
-       
-    <% else %>
-       <% a = [*(1..29)] %>
-
-   <% end %>
-   
-   <% a.each do |day| %>   
+   <% (a..b).each do |date| %>   
              <tr>
-                <td><%= day %></td>
+                <td><%= date %></td>
+                <% @physicals.each do |physical| %>
+                      <% if date.day == physical.created_at.day %>
+                        <td><%= physical.weight %></td>
+                        
+                      <% end %>
+                    <% end%> 
+                    
+                    
+                
             </tr>
-    
+            
    <% end %>
+   
+   
+    
+   
+   
+
+   
+    

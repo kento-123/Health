@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get "/follows", to: "follows#index"
   #post "/follows", to: "#create",as: "follow_post"
   get "/users/:id", to: "users#show", as: "user"
+  post "/users/:id", to: "users#create"
+  get "/users/:id/new", to:"user#new"
   
   get "/graphs", to: "graphs#index"
   
