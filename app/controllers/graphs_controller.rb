@@ -1,12 +1,11 @@
 class GraphsController < ApplicationController
     
 def index
-    @physicals = [
-  Physical.new(weight: 70, created_at: Time.zone.parse("2021/3/4")),
-  Physical.new(weight: 75, created_at: Time.zone.parse("2021/3/7")),
-  Physical.new(weight: 80, created_at: Time.zone.parse("2021/3/9"))
+  @physical = current_user.physicals
+  #@weights = @physicals.pluck(:weight) 
+  @weights = [70,75,80]
 
-]
   end
+
 
 end

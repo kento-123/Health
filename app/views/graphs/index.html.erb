@@ -1,11 +1,4 @@
 
-
-
-<% hash = {"weight1" => 70,"weight2" => 75,"weight3" => 80} %>
-        <%= menu["0"] %>
-
-
-
 <div id="my-container" style="width: 640px; height: 480px; border: solid 1px red">
   <div id="my-chart"></div>
 </div>
@@ -15,8 +8,9 @@ var chart = c3.generate({
   bindto: '#my-chart',
   data: {
     columns: [
-         <%== ['data1', hash["weight1"],hash["weight2"],hash["weight3"] %>
+         <%== ["data1"] + @weights %>
          
+
     ]
   }
 });

@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
+    def edit
+        @user = current_user
+    end
 
-    def create
-        @user = User.create params.require(:user).permit(:image) # POINT
+    def update
+        @user = current_user.update params.require(:user).permit(:image) # POINT
 
     end
     def show

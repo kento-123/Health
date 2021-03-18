@@ -1,8 +1,7 @@
  <h1>ユーザ詳細</h1>
-
-
+<% if @user.image.attached? %>
   <%= image_tag @user.image %>
-
+<% end %>
 
     <table class="table table-striped">
         <tr>

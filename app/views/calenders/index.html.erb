@@ -26,25 +26,25 @@
    </tr>
    </thead>
    
-   <% a = Time.zone.today.beginning_of_month %>
-   <% b = Time.zone.today.end_of_month %>
+     <% a = Time.zone.today.beginning_of_month %>
+     <% b = Time.zone.today.end_of_month %>
 
-   <% (a..b).each do |date| %>   
-             <tr>
-                <td><%= date %></td>
-                <% @physicals.each do |physical| %>
-                      <% if date.day == physical.created_at.day %>
-                        <td><%= physical.weight %></td>
-                        
-                      <% end %>
-                    <% end%> 
-                    
-                    
-                
-            </tr>
-            
-   <% end %>
-   
+    <% (a..b).each do |date| %> 
+       <tr>
+           <td><%= date %></td>
+        <% @physicals.each do |physical| %>
+           <% if date.day == physical.created_at.day %>
+           <td><%= physical.weight %></td>
+           <td>15</td>
+           <td>10</td>
+           <td>1500</td>
+           <% end %>
+        <% end%>
+        </tr>
+ 
+    <% end %>
+    
+</table>
    
     
    
