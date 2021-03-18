@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :posts
   #post "/posts", to: "physicals#create"
   get "/physicals", to: "physicals#new"
-  post "/physicals", to: "physicals#create"
+  post "/graphs", to: "physicals#create"
   
   get "/follows", to: "follows#index"
   #post "/follows", to: "#create",as: "follow_post"
