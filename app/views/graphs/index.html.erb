@@ -8,9 +8,7 @@ var chart = c3.generate({
   bindto: '#my-chart',
   data: {
     columns: [
-         <%== ["data1"] + @weights %>
-         
-
+         <%== ["weight"] + @weights %>
     ]
   }
 });
