@@ -6,8 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Post.create(content: "アイウエオ",user_id: 1)
-Post.create(content: "か",user_id: 2)
-Post.create(content: "さ",user_id: 1)
+
+User.create([
+    {name: "guest1", email: "guest1@example.com", password: "password" , password_confirmation: "password", height: 170, age: 25, gender: 1},
+    {name: "guest2", email: "guest2@example.com", password: "password" , password_confirmation: "password", height: 172, age: 25, gender: 1},
+    {name: "guest3", email: "guest3@example.com", password: "password" , password_confirmation: "password", height: 170, age: 25, gender: 1}
+    
+    ])
+
 
 

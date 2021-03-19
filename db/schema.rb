@@ -33,17 +33,6 @@ ActiveRecord::Schema.define(version: 2021_03_11_074106) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "calenders", force: :cascade do |t|
-    t.float "before_weight"
-    t.float "weight"
-    t.float "fat_percentage"
-    t.float "muscle"
-    t.integer "metabolism"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "follows", force: :cascade do |t|
     t.integer "follow_id"
     t.integer "user_id"
