@@ -2,14 +2,14 @@ class GraphsController < ApplicationController
     
 def index
   
-  @physical = current_user.physicals
+  @physicals = current_user.physicals
   
       p "-----------------------------"
-      p @physical
+      p @physicals
       p "------------------------------"
       
       
-  @weights = @physical.pluck(:weight) 
+  @weights = @physicals.pluck(:weight) 
   
       p "-----------------------------"
       p @weights

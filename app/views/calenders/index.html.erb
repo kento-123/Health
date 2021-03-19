@@ -35,9 +35,9 @@
         <% @physicals.each do |physical| %>
            <% if date.day == physical.created_at.day %>
            <td><%= physical.weight %></td>
-           <td>15</td>
-           <td>10</td>
-           <td>1500</td>
+           <td><%= physical.fat_percentage %></td>
+           <td><%= physical.muscle %></td>
+           <td><%= physical.metabolism %></td>
            <% end %>
         <% end%>
         </tr>
