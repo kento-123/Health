@@ -10,6 +10,8 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
         
+
+        
         #@user = [
                     #User.new(name: "k", self_introduction: "よろしくお願いします。", height: 170, age: 25, gender: 1 ),
                     
